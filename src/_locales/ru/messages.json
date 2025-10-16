@@ -1,0 +1,134 @@
+{
+	"extensionName": {
+		"message": "Tab Tosser"
+	},
+	"extensionDescription": {
+		"message": "Автоматически закрывает вкладки, неиспользуемые слишком долго. Освободитесь от цифрового беспорядка."
+	},
+	"setupTitle": {
+		"message": "Настройка Tab Tosser"
+	},
+	"setupPageTitle": {
+		"message": "Tab Tosser - Установка"
+	},
+	"settingsPageTitle": {
+		"message": "Tab Tosser - Настройки"
+	},
+	"supportPageTitle": {
+		"message": "Tab Tosser - Поддержка"
+	},
+	"closeTabsLegend": {
+		"message": "Закрывать вкладки"
+	},
+	"closeTabsLabel": {
+		"message": "Закрывать вкладки"
+	},
+	"pausedMessage": {
+		"message": "Tab Tosser проверит игнорируемые вкладки"
+	},
+	"whenIdle": {
+		"message": "когда устройство неактивно"
+	},
+	"checkSooner": {
+		"message": "Проверить раньше"
+	},
+	"tabsClosedLabel": {
+		"message": "вкладок закрыто"
+	},
+	"statisticsTitle": {
+		"message": "Статистика"
+	},
+	"detailedStatsMessage": {
+		"message": "Tab Tosser помогает вам оставаться организованным с $DATE$.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "17.10.2025"
+			}
+		}
+	},
+	"recentlyTossed": {
+		"message": "Недавно закрытые вкладки:"
+	},
+	"clearHistory": {
+		"message": "Очистить историю"
+	},
+	"reopenAll": {
+		"message": "Переоткрыть все"
+	},
+	"supportInfo": {
+		"message": "Информация о поддержке"
+	},
+	"settingsChangeNote": {
+		"message": "Вы можете изменить эту настройку позже и просмотреть недавно закрытые вкладки в настройках расширения."
+	},
+	"noImmediateClose": {
+		"message": "Никакие вкладки не будут закрыты немедленно."
+	},
+	"ttlDisabled": {
+		"message": "Вручную"
+	},
+	"ttlOneDay": {
+		"message": "Через 1 день"
+	},
+	"ttlOneWeek": {
+		"message": "Через 1 неделю"
+	},
+	"ttlOneMonth": {
+		"message": "Через 1 месяц"
+	},
+	"supportTitle": {
+		"message": "Информация для диагностики"
+	},
+	"supportDescription": {
+		"message": "Эта страница содержит техническую информацию, которая может быть полезна при решении проблем."
+	},
+	"supportContactPrefix": {
+		"message": "Если нужна помощь,"
+	},
+	"contactDeveloper": {
+		"message": "обратитесь к разработчику"
+	},
+	"settingsTitle": {
+		"message": "Настройки"
+	},
+	"logsTitle": {
+		"message": "Логи расширения"
+	},
+	"closedTabsTitle": {
+		"message": "Архив закрытых вкладок"
+	},
+	"openTabsTitle": {
+		"message": "Открытые вкладки"
+	},
+	"openTabsDescription": {
+		"message": "Эти вкладки могут быть автоматически закрыты согласно вашим настройкам."
+	},
+	"tabIdHeader": {
+		"message": "ID"
+	},
+	"windowIdHeader": {
+		"message": "Окно"
+	},
+	"lastAccessedHeader": {
+		"message": "Последний доступ"
+	},
+	"titleHeader": {
+		"message": "Заголовок"
+	},
+	"actionsTitle": {
+		"message": "Действия"
+	},
+	"exportSettings": {
+		"message": "Экспорт настроек"
+	},
+	"clearLogs": {
+		"message": "Очистить логи"
+	},
+	"backToSettings": {
+		"message": "Назад к настройкам"
+	},
+	"confirmClearLogs": {
+		"message": "Вы уверены, что хотите очистить все логи?"
+	}
+}

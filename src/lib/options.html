@@ -1,32 +1,69 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<script type="module" src="./slider.js"></script>
-		<script type="module" src="./closed-tabs.js"></script>
-		<script type="module" src="./stats.js"></script>
-		<script type="module" src="./config.js"></script>
-		<script type="module" src="./options.js"></script>
-	</head>
-	<body>
-		<form>
-			<div>
-				<label for="ttl">Close tabs </label>
-				<select id="ttl"></select>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tab Tosser Settings</title> <!-- Will be replaced by JS -->
+	<link rel="stylesheet" href="./styles.css">
+	<script type="module" src="./slider.js"></script>
+	<script type="module" src="./closed-tabs.js"></script>
+	<script type="module" src="./stats.js"></script>
+	<script type="module" src="./config.js"></script>
+	<script type="module" src="./options.js"></script>
+</head>
+
+<body>
+	<!-- Rest remains the same -->
+	<div class="container">
+		<header>
+			<h1 data-i18n="extensionName">Tab Tosser</h1>
+		</header>
+
+		<main>
+			<section class="card">
+				<div class="form-group">
+					<label for="ttl" data-i18n="closeTabsLabel">Close tabs</label>
+					<select id="ttl" aria-describedby="ttl-description"></select>
+				</div>
+			</section>
+
+			<div id="paused" class="status-message hidden">
+				<p>
+					<span data-i18n="pausedMessage">Tab Tosser will check for ignored tabs</span>
+					<span id="nextRun" data-i18n="whenIdle">when your device is idle</span>.
+				</p>
+				<a id="resumeLink" href="#resume" class="btn btn-primary" data-i18n="checkSooner">Check sooner</a>
 			</div>
 
-			<p id="paused" style="display: none">Tab Tosser will check for ignored tabs <span id="nextRun">when your device is idle</span>. <a id="resumeLink" href="#resume">Check sooner</a></p>
+			<section class="stats-grid fade-in">
+				<div class="stats-counter">
+					<div class="stats-number" id="totalTabsClosedCount">0</div>
+					<p class="stats-label" data-i18n="tabsClosedLabel">tabs closed</p>
+				</div>
+				<div class="stats-info">
+					<h2 class="stats-title" data-i18n="statisticsTitle">Statistics</h2>
+					<p id="detailedStats" class="stats-description"></p>
+				</div>
+			</section>
 
-			<p>Tab Tosser has helped you rid of <span id="totalTabsClosedCount">0</span> tabs since <span id="initDate">2019-01-15</span>.</p>
+			<section id="archivedTabsSection" class="card">
+				<h2 data-i18n="recentlyTossed">Recently tossed tabs:</h2>
+				<ul id="archivedTabs" class="tab-list"></ul>
 
-			<div id="archivedTabsSection">
-				<p>Recently tossed tabs:</p>
-				<ul id="archivedTabs"></ul>
-				<p><a id="clearHistoryLink" href="#clearArchivedTabsHistory">Clear tossed tab history</a></p>
-				<p><a id="openHistoryLink" href="#openArchivedTabs">Reopen all tossed tabs</a></p>
-			</div>
+				<div class="btn-group">
+					<a id="clearHistoryLink" href="#clearArchivedTabsHistory" class="btn btn-destructive"
+						data-i18n="clearHistory">Clear history</a>
+					<a id="openHistoryLink" href="#openArchivedTabs" class="btn btn-primary" data-i18n="reopenAll">Reopen all</a>
+				</div>
+			</section>
 
-			<p><a id="openSupportLink" href="#support">Support information</a></p>
-		</form>
-	</body>
+			<section class="card">
+				<a id="openSupportLink" href="#support" class="btn btn-secondary" data-i18n="supportInfo">Support
+					information</a>
+			</section>
+		</main>
+	</div>
+</body>
+
 </html>

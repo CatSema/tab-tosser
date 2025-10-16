@@ -1,6 +1,6 @@
 {
 	"name": "tab-tosser",
-	"version": "3.3.1",
+	"version": "3.3.2",
 	"description": "Automatically close tabs that have been ignored for too long. Free yourself of digital clutter.",
 	"directories": {
 		"lib": "lib",
@@ -8,10 +8,9 @@
 	},
 	"scripts": {
 		"test": "qunit",
-		"build:css": "npx tailwindcss --minify -i ./tailwind.css -o ./src/lib/styles.css --config tailwind.config.cjs",
-		"build:cp": "rm -rf dist/* && cp LICENSE.txt dist/ && cp src/{manifest.json,icon.svg} dist/ && mkdir dist/lib && cp src/lib/{background.html,first-run.html,support.html,options.html,styles.css} dist/lib/ && mkdir dist/vendor && cp src/vendor/* dist/vendor",
+		"build:cp": "rm -rf dist/* && cp LICENSE.txt dist/ && cp src/{manifest.json,icon.svg} dist/ && cp -r src/_locales dist/ && mkdir dist/lib && cp src/lib/{background.html,first-run.html,support.html,options.html,styles.css} dist/lib/ && mkdir dist/vendor && cp src/vendor/* dist/vendor",
 		"build:ts": "npx tsc",
-		"build": "npm run build:css && npm run build:cp && npm run build:ts",
+		"build": "npm run build:cp && npm run build:ts",
 		"release": "npm run build && web-ext build --overwrite-dest --verbose"
 	},
 	"repository": {
@@ -26,16 +25,14 @@
 	},
 	"homepage": "https://www.jeremiahlee.com/tab-tosser/",
 	"devDependencies": {
-		"@tailwindcss/forms": "^0.5.3",
 		"@types/firefox-webext-browser": "^109.0.0",
-		"@types/node": "^18.11.18",
-		"autoprefixer": "^10.3.7",
-		"jsdom": "^21.1.0",
-		"qunit": "^2.19.4",
-		"sinon": "^15.0.1",
-		"tailwindcss": "^3.2.4",
-		"typescript": "^4.9.4",
-		"webextensions-api-fake": "^1.3.0"
+		"@types/node": "^22.7.9",
+		"autoprefixer": "^10.4.20",
+		"jsdom": "^25.0.1",
+		"qunit": "^2.22.0",
+		"sinon": "^17.0.2",
+		"typescript": "^5.6.3",
+		"web-ext": "^8.3.0"
 	},
 	"engines": {
 		"node": ">=18.13.0"

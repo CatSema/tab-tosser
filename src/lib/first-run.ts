@@ -1,24 +1,45 @@
-import { getTtl, setTtl } from "./config.js";
-import { sliderMarks } from "./slider.js";
+import { getTtl, setTtl } from "./config.js"
+import { sliderMarks, updateSliderMarks } from "./slider.js"
+import { localizeElements, setLocalizedTitle } from "./i18n.js"
 
 async function ttlChange(): Promise<void> {
-	await setTtl(Number((document.getElementById("settings") as HTMLFormElement).elements["ttl"].value));
+	const form = document.getElementById("settings") as HTMLFormElement
+	const formData = new FormData(form)
+	const selectedValue = formData.get("ttl") as string
+
+	if (selectedValue) {
+		await setTtl(Number(selectedValue))
+	}
 }
 
 async function populateSlider(): Promise<void> {
-	let preselectedValue = await getTtl();
+	updateSliderMarks()
 
-	let radioButtons:string = "";
+	const preselectedValue = await getTtl()
+	let radioButtons = ""
+
 	for (const sliderMark of sliderMarks) {
-		radioButtons += `<div class="flex items-center"><input type="radio" id="option-${sliderMark[0]}" name="ttl" value="${sliderMark[0]}" class="h-4 w-4 border-gray-300 text-purple focus:ring-purple" ${(sliderMark[0] === preselectedValue)? "checked" : ""}><label for="option-${sliderMark[0]}" class="ml-3 block text-base font-normal text-gray-700">${sliderMark[1]}</label></div>`;
+		const isChecked = sliderMark[0] === preselectedValue ? "checked" : ""
+		radioButtons += `
+      <label class="radio-item" for="option-${sliderMark[0]}">
+        <input type="radio" id="option-${sliderMark[0]}" name="ttl" value="${sliderMark[0]}" ${isChecked}>
+        ${sliderMark[1]}
+      </label>`
 	}
 
-	const form = document.getElementById("ttlOptions") as HTMLDivElement;
-	form.innerHTML = radioButtons;
+	const container = document.getElementById("ttlOptions") as HTMLDivElement
+	container.innerHTML = radioButtons
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-	document.getElementById("settings")!.addEventListener("change", ttlChange);
-	await populateSlider();
-	await ttlChange();
-});
+	// Set localized page title
+	setLocalizedTitle('setupPageTitle')
+
+	document.body.classList.add("fade-in")
+	localizeElements()
+
+	document.getElementById("settings")!.addEventListener("change", ttlChange)
+
+	await populateSlider()
+	await ttlChange()
+})

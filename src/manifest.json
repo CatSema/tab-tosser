@@ -1,13 +1,14 @@
 {
 	"manifest_version": 3,
-	"name": "Tab Tosser",
+	"name": "__MSG_extensionName__",
+	"description": "__MSG_extensionDescription__",
+	"default_locale": "en",
 	"author": "Jeremiah Lee",
 	"developer": {
 		"name": "Jeremiah Lee",
 		"url": "https://www.jeremiahlee.com/"
 	},
-	"version": "3.3.1",
-	"description": "Automatically close tabs that have been ignored for too long. Free yourself of digital clutter.",
+	"version": "3.3.2",
 	"homepage_url": "https://www.jeremiahlee.com/tab-tosser/",
 	"icons": {
 		"500": "icon.svg"

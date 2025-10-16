@@ -1,0 +1,134 @@
+{
+	"extensionName": {
+		"message": "Tab Tosser"
+	},
+	"extensionDescription": {
+		"message": "Automatically close tabs that have been ignored for too long. Free yourself of digital clutter."
+	},
+	"setupTitle": {
+		"message": "Tab Tosser Setup"
+	},
+	"setupPageTitle": {
+		"message": "Tab Tosser - Setup"
+	},
+	"settingsPageTitle": {
+		"message": "Tab Tosser - Settings"
+	},
+	"supportPageTitle": {
+		"message": "Tab Tosser - Support"
+	},
+	"closeTabsLegend": {
+		"message": "Close tabs"
+	},
+	"closeTabsLabel": {
+		"message": "Close tabs"
+	},
+	"pausedMessage": {
+		"message": "Tab Tosser will check for ignored tabs"
+	},
+	"whenIdle": {
+		"message": "when your device is idle"
+	},
+	"checkSooner": {
+		"message": "Check sooner"
+	},
+	"tabsClosedLabel": {
+		"message": "tabs closed"
+	},
+	"statisticsTitle": {
+		"message": "Statistics"
+	},
+	"detailedStatsMessage": {
+		"message": "Tab Tosser has been helping you stay organized since $DATE$.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "17.10.2025"
+			}
+		}
+	},
+	"recentlyTossed": {
+		"message": "Recently tossed tabs:"
+	},
+	"clearHistory": {
+		"message": "Clear history"
+	},
+	"reopenAll": {
+		"message": "Reopen all"
+	},
+	"supportInfo": {
+		"message": "Support information"
+	},
+	"settingsChangeNote": {
+		"message": "You can change this setting later and view recently tossed tabs in the extension preferences."
+	},
+	"noImmediateClose": {
+		"message": "No tabs will be closed immediately."
+	},
+	"ttlDisabled": {
+		"message": "Manually"
+	},
+	"ttlOneDay": {
+		"message": "After 1 day"
+	},
+	"ttlOneWeek": {
+		"message": "After 1 week"
+	},
+	"ttlOneMonth": {
+		"message": "After 1 month"
+	},
+	"supportTitle": {
+		"message": "Troubleshooting Information"
+	},
+	"supportDescription": {
+		"message": "This page contains technical information that might be useful when you're trying to solve a problem."
+	},
+	"supportContactPrefix": {
+		"message": "If you need help,"
+	},
+	"contactDeveloper": {
+		"message": "contact the developer"
+	},
+	"settingsTitle": {
+		"message": "Settings"
+	},
+	"logsTitle": {
+		"message": "Extension Logs"
+	},
+	"closedTabsTitle": {
+		"message": "Closed Tabs Archive"
+	},
+	"openTabsTitle": {
+		"message": "Currently Open Tabs"
+	},
+	"openTabsDescription": {
+		"message": "These tabs are eligible for automatic closing based on your current settings."
+	},
+	"tabIdHeader": {
+		"message": "ID"
+	},
+	"windowIdHeader": {
+		"message": "Window"
+	},
+	"lastAccessedHeader": {
+		"message": "Last Accessed"
+	},
+	"titleHeader": {
+		"message": "Title"
+	},
+	"actionsTitle": {
+		"message": "Actions"
+	},
+	"exportSettings": {
+		"message": "Export Settings"
+	},
+	"clearLogs": {
+		"message": "Clear Logs"
+	},
+	"backToSettings": {
+		"message": "Back to Settings"
+	},
+	"confirmClearLogs": {
+		"message": "Are you sure you want to clear all logs?"
+	}
+}

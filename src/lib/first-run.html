@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tab Tosser™ for Firefox</title>
-		<link rel="stylesheet" href="./styles.css" />
-		<script type="module" src="./slider.js"></script>
-		<script type="module" src="./closed-tabs.js"></script>
-		<script type="module" src="./open-tabs.js"></script>
-		<script type="module" src="./first-run.js"></script>
-	</head>
-	<body>
-		<header class="text-center text-white p-6 lg:p-12">
-			<img class="mx-auto" src="../icon.svg" alt="Logo: a circular smiling face with eyes covered by a hat in the shape of a Web browser tab UI" width="200" height="200" />
-			<h1 class="font-hairline mt-12 text-5xl">Tab Tosser setup</h1>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tab Tosser Setup</title> <!-- Will be replaced by JS -->
+	<link rel="stylesheet" href="./styles.css">
+	<script type="module" src="./slider.js"></script>
+	<script type="module" src="./closed-tabs.js"></script>
+	<script type="module" src="./open-tabs.js"></script>
+	<script type="module" src="./first-run.js"></script>
+</head>
+
+<body>
+	<!-- Rest remains the same -->
+	<div class="container">
+		<header class="welcome-hero fade-in">
+			<div class="welcome-icon">
+				<img src="../icon.svg" alt="Tab Tosser Icon">
+			</div>
+			<h1 data-i18n="setupTitle">Tab Tosser Setup</h1>
+			<p class="welcome-subtitle" data-i18n="extensionDescription">Automatically close tabs that have been ignored for
+				too long. Free yourself of digital clutter.</p>
 		</header>
 
-		<form id="settings" class="container mx-auto p-6 lg:pt-12 lg:pb-12 leading-normal text-center">
-			<fieldset class="mb-12 w-max mx-auto">
-				<legend class="text-lg font-semibold leading-6 mb-4">Close tabs</legend>
+		<form id="settings" class="setup-form">
+			<section class="card">
+				<h2 data-i18n="closeTabsLegend">Close tabs</h2>
+				<div id="ttlOptions" class="radio-group"></div>
+			</section>
 
-				<div id="ttlOptions" class="space-y-4"></div>
-			</fieldset>
-
-			<div class="font-hairline max-w-md mx-auto text-gray-600 text-sm">
-				<p class="mb-4">You can change this setting later and view recently tossed tabs in the extension preferences.</p>
-				<p>No tabs will be closed immediately.</p>
+			<div class="setup-description">
+				<p data-i18n="settingsChangeNote">You can change this setting later and view recently tossed tabs in the
+					extension preferences.</p>
+				<p data-i18n="noImmediateClose">No tabs will be closed immediately.</p>
 			</div>
 		</form>
-	</body>
+	</div>
+</body>
+
 </html>
